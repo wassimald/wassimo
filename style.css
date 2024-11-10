@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(gta5.jpg);
+    background-size: contain; 
+    background-position: 100px 78px;
+    animation: fadeInBody 1s ease-out; /* Fade-in effect for body */
+}
+
+.container, .login-container, .age-calculator {
+    background-color: rgb(109, 11, 40);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 600px;
+    animation: fadeInContainer 1.5s ease-out; /* Fade-in animation for the container */
+}
+
+h2 {
+    margin-bottom: 30px;
+    background-color: rgb(255, 255, 255);
+    animation: fadeInText 1s ease-out; /* Fade-in animation for header */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #8d1b91;
+    box-shadow: 0 0 10px rgba(143, 19, 101, 0.6);
+    transform: scale(1.02);
+}
+
+button {
+    background-color: #8d1b91;
+    color: white;
+    font-size: 16px;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: buttonAnimation 1s ease-out; /* Button floating animation */
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(72, 196, 72, 0.6);
+}
+
+button:active {
+    background-color: #388e3c;
+    transform: scale(0.98);
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@keyframes fadeInBody {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInContainer {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
